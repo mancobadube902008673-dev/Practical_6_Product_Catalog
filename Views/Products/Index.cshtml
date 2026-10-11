@@ -1,0 +1,28 @@
+@model IEnumerable<Practical_6_Product_Catalog.Models.Product>
+
+@{
+    ViewData["Title"] = "Product Catalog";
+}
+
+<section class="catalog-header">
+    <h1>Product Catalog</h1>
+    <p>Browse our sample products and their details.</p>
+</section>
+
+<div class="product-grid">
+    @foreach (var product in Model)
+    {
+        <article class="product-card">
+            <img class="product-image" src="~/images/@product.ImageFile" alt="@product.Name" />
+            <div class="product-content">
+                <span class="category">@product.Category</span>
+                <h2>@product.Name</h2>
+                <p>@product.Description</p>
+                <div class="product-footer">
+                    <strong>@product.Price.ToString("C")</strong>
+                    <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">View details</a>
+                </div>
+            </div>
+        </article>
+    }
+</div>

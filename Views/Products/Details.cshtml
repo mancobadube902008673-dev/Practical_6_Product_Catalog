@@ -1,0 +1,14 @@
+@model Practical_6_Product_Catalog.Models.Product
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<div class="details-card">
+    <img class="details-image" src="~/images/@Model.ImageFile" alt="@Model.Name" />
+    <span class="category">@Model.Category</span>
+    <h1>@Model.Name</h1>
+    <p>@Model.Description</p>
+    <h2>@Model.Price.ToString("C")</h2>
+    <a asp-controller="Products" asp-action="Index">Back to catalog</a>
+</div>

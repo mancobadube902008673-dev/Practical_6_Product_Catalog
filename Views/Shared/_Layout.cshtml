@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Product Catalog</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" asp-controller="Products" asp-action="Index">Product Catalog</a>
+        <nav><a asp-controller="Products" asp-action="Index">Home</a></nav>
+    </header>
+    <main class="container">
+        @RenderBody()
+    </main>
+    <footer class="site-footer">ASP.NET Core MVC Product Catalog — Practical 6</footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

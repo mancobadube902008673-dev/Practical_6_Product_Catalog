@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f4f7fb; color: #182230; }
+.site-header { display: flex; justify-content: space-between; align-items: center; padding: 18px 7%; background: #15345b; color: white; }
+.site-header a { color: white; text-decoration: none; }
+.brand { font-size: 1.25rem; font-weight: 700; }
+.site-header nav a { margin-left: 18px; }
+.container { width: min(1100px, 90%); margin: 35px auto 60px; }
+.catalog-header { text-align: center; margin-bottom: 30px; }
+.catalog-header h1 { margin-bottom: 8px; color: #15345b; }
+.catalog-header p { color: #667085; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; }
+.product-card, .details-card { background: white; border: 1px solid #e1e7ef; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 18px rgba(18, 44, 75, .06); }
+.product-image { width: 100%; height: 180px; display: block; object-fit: cover; background: #e9f1fb; }
+.product-content { padding: 20px; }
+.category { display: inline-block; color: #285b91; background: #e9f1fb; padding: 5px 9px; border-radius: 20px; font-size: .78rem; }
+.product-content h2 { margin: 12px 0 8px; }
+.product-content p, .details-card p { color: #667085; line-height: 1.5; min-height: 45px; }
+.product-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 18px; }
+.product-footer strong { color: #15345b; font-size: 1.1rem; }
+.product-footer a, .details-card a { color: white; background: #1c66ad; padding: 9px 12px; border-radius: 7px; text-decoration: none; font-size: .9rem; }
+.details-card { max-width: 650px; margin: 30px auto; padding: 30px; }
+.details-image { width: 100%; max-height: 320px; object-fit: contain; border-radius: 8px; background: #f4f7fb; margin-bottom: 20px; }
+.details-card h1 { color: #15345b; }
+.details-card h2 { margin: 25px 0; color: #15345b; }
+.site-footer { text-align: center; padding: 20px; color: #667085; border-top: 1px solid #e1e7ef; }
